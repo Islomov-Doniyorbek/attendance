@@ -12,7 +12,7 @@ function userConnectMeTgBot() {
         e.preventDefault();
         let date = new Date();
 
-        let information = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()} ${select.value}`;
+        let information = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()} ${select.value} darsga qatnashmadi:`;
         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${information}`, {
             method: "GET"
         })
