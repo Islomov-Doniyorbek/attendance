@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+}
+h1 {
+    text-align: center;
+    border-bottom: 1px solid silver;
+    background: aquamarine;
+    position: relative;
+    padding: 5px;
+    color: forestgreen;
+}
+form {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.selects {
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    gap: 2px;
+}
+.selects select {
+    position: relative;
+    background: tan;
+    font-size: 14px;
+}
+ol {
+    position: relative;
+    width: 100%;
+    padding: 0 20px 0 25px;
+}
+ol li {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 5px;
+    border: 2px solid silver;
+    border-top: 2px solid azure;
+    margin: 5px;
+}
+li span {
+    position: absolute;
+    left: 10px;
+}
+li input {
+    position: absolute;right: 15px;
+}
+button {
+    padding: 5px 10px 5px 10px;
+    font-size: 18px;
+    color: lime;
+    background: navy;
+}

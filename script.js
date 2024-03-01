@@ -2,6 +2,7 @@
 function userConnectMeTgBot() {
     let form = document.querySelector("form")
     let select = document.querySelector("#para")
+    let selectLess = document.querySelector("#lesson")
     // let date = document.querySelector("#date").value
     let bot = {
         TOKEN: "7161673530:AAG23oBDC6xKDJ_jqjPrrlYx3ANu7iidWO4",
@@ -12,7 +13,7 @@ function userConnectMeTgBot() {
         e.preventDefault();
         let date = new Date();
 
-        let information = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()} ${select.value} darsga qatnashmadi:`;
+        let information = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()} ${select.value}  ${selectLess.value} faniga qatnashmadi:`;
         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${information}`, {
             method: "GET"
         })
