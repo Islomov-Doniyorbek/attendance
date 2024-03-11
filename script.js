@@ -18,7 +18,14 @@ function userConnectMeTgBot() {
         e.preventDefault();
         let date = new Date();
 
-        let information = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()} ${select.value}  ${selectLess.value} faniga qatnashmadi:`;
+        let studentsChecking = new String();
+        let students = document.querySelectorAll("#checkbox")
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].checked) {
+                studentsChecking += `%0A - ${students[i].parentElement.querySelector("span").innerText}`;                
+            }
+        }
+        let information = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${select.value}  ${selectLess.value} faniga qatnashmadi:` + studentsChecking;
         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${information}`, {
             method: "GET"
         })
@@ -28,19 +35,6 @@ function userConnectMeTgBot() {
             alert("Xabar yuborilmadi!")
             console.log(error);
         })
-        
-        
-        let students = document.querySelectorAll("#checkbox")
-        for (let i = 0; i < students.length; i++) {
-            if (students[i].checked) {
-                fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${students[i].parentElement.querySelector("span").innerText}`, {
-            method: "GET"
-        })
-            
-            }
-        }
-
-
         fetch(`https://api.telegram.org/bot${bot2.TOKEN}/sendMessage?chat_id=${bot2.chatID}&text=${information}`, {
             method: "GET"
         })
@@ -51,14 +45,30 @@ function userConnectMeTgBot() {
             console.log(error);
         })
         
-        for (let i = 0; i < students.length; i++) {
-            if (students[i].checked) {
-                fetch(`https://api.telegram.org/bot${bot2.TOKEN}/sendMessage?chat_id=${bot2.chatID}&text=${students[i].parentElement.querySelector("span").innerText}`, {
-            method: "GET"
-        })
+        
+//         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${studentsChecking}`, {
+//     method: "GET"
+// })
+
+
+        // fetch(`https://api.telegram.org/bot${bot2.TOKEN}/sendMessage?chat_id=${bot2.chatID}&text=${information}`, {
+        //     method: "GET"
+        // })
+        // .then(success => {
+        //     alert("Amaliyot yakunlandi")
+        // }, error => {
+        //     alert("Xabar yuborilmadi!")
+        //     console.log(error);
+        // })
+        
+        // for (let i = 0; i < students.length; i++) {
+        //     if (students[i].checked) {
+        //         fetch(`https://api.telegram.org/bot${bot2.TOKEN}/sendMessage?chat_id=${bot2.chatID}&text=${students[i].parentElement.querySelector("span").innerText}`, {
+        //     method: "GET"
+        // })
             
-            }
-        }
+        //     }
+        // }
         
     
     
