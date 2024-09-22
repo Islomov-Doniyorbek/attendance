@@ -44,30 +44,30 @@ function userConnectMeTgBot() {
             console.log(error);
         })
 
-        // fetch(`https://api.telegram.org/bot${bot2.TOKEN}/sendMessage?chat_id=${bot2.chatID}&text=${information}`, {
-        //     method: "GET"
-        // })
-        // .then(success => {
-        //     alert("Amaliyot yakunlandi")
-        // }, error => {
-        //     alert("Xabar yuborilmadi!")
-        //     console.log(error);
-        // })
+         fetch(`https://api.telegram.org/bot${bot2.TOKEN}/sendMessage?chat_id=${bot2.chatID}&text=${information}`, {
+             method: "GET"
+         })
+         .then(success => {
+             alert("Amaliyot yakunlandi")
+         }, error => {
+             alert("Xabar yuborilmadi!")
+             console.log(error);
+         })
 
-        // fetch(`https://api.telegram.org/bot${group.TOKEN}/sendMessage?chat_id=${group.chatID}&text=${information}`, {
-        //     method: "GET"
-        // })
-        // .then(success => {
-        //     alert("Amaliyot yakunlandi")
-        // }, error => {
-        //     alert("Xabar yuborilmadi!")
-        //     console.log(error);
-        // })
+         fetch(`https://api.telegram.org/bot${group.TOKEN}/sendMessage?chat_id=${group.chatID}&text=${information}`, {
+             method: "GET"
+         })
+         .then(success => {
+             alert("Amaliyot yakunlandi")
+         }, error => {
+             alert("Xabar yuborilmadi!")
+             console.log(error);
+         })
         
         
-//         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${studentsChecking}`, {
-//     method: "GET"
-// })
+         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${studentsChecking}`, {
+     method: "GET"
+ })
 
 
         // fetch(`https://api.telegram.org/bot${bot2.TOKEN}/sendMessage?chat_id=${bot2.chatID}&text=${information}`, {
